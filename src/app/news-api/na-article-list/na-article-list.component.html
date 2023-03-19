@@ -1,12 +1,16 @@
 <h3>World News</h3>
 <div class="list-group">
-    <a 
-        *ngFor="let article of articles" 
-        class="list-group-item list-group-item-action" 
-        [href]="article.url"
-        target="_blank"
-    >
-        {{ article.title | trimOutletName: article.source.name }}
-    </a>
+  <a
+    *ngFor="let article of articles"
+    class="list-group-item list-group-action"
+    [href]="article.url"
+    target="_blank"
+  >
+    {{ article.title | trimOutletName: article.source.name }}
+  </a>
 </div>
-<app-paginator [numberOfPages]="2"></app-paginator>
+ 
+<app-paginator
+  [numberOfPages]="numberOfPages"
+  (pageChanged)="onPageChanged($event)"
+></app-paginator>
