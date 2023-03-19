@@ -1,12 +1,17 @@
-<h3>World News</h3>
-<div class="list-group">
-  <a
+
+<blockquote class="blockquote text-center">
+    <h3 class="mb-0" style="font: 600 3em 'Raleway', sans-serif">🌍 World News 24/7 🌍</h3>
+    <footer class="blockquote-footer">Here's the tea of the day <cite title="Source Title">for you!!</cite></footer>
+</blockquote>
+
+<div class="list-group border-bottom border-top border-info rounded">
+    <a
     *ngFor="let article of articles"
-    class="list-group-item list-group-action"
+    class="list-group-item list-group-item-action"
     [href]="article.url"
     target="_blank"
   >
-    {{ article.title | trimOutletName: article.source.name }}
+    {{ article.title | trimOutletName: article.source.name }} | <small>(Click to read)</small>
   </a>
 </div>
  
