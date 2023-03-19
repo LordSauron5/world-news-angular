@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li *ngFor="let forecast of forecast$ | async" class="weather-item list-group-item">
+        <p class="temp">{{  (forecast.temp | number: '1.0-0') }} &deg;C</p> <!-- round off and display degrees celcius -->
+        <p class="day">{{ (forecast.dateString | date: 'EE') }}</p> 
+    </li>
+</ul>
