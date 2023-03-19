@@ -1,6 +1,8 @@
-# Landing
+# World News 24/7 - with Angular 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+The World News 24/7 Application is a project that provides access to the latest World News through the news API
+It also displays the weather forcast in your location (if location is shared) for the week.
 
 ## Development server
 
